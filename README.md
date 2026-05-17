@@ -28,6 +28,8 @@ This will extract the icons to `out/ui`, then modify them and optimize them for 
 
 ## Ading New Icons
 
-First, use [FfxivImageDump](https://github.com/joelspadin/FfxivImageDump) to dump the UI icons and identify the icon number.
+First, use [FfxivImageDump](https://github.com/joelspadin/FfxivImageDump) to dump the UI icons and identify the icon number of the image to add.
 
 Next, edit the `Icons` array in [Program.cs](./Program.cs) to add the icon. Each entry is a tuple of the icon number, the destination path, and a `Configuration` object describing any modifications that need to be done, such as resizing the image.
+
+Images should typically be sized to 2x the size at which they will normally be used. Images larger than 256 x 256 pixels should be avoided to reduce image load times.
