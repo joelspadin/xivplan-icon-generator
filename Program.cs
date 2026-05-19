@@ -116,9 +116,9 @@ List<(int Id, string Path, Configuration Config)> Icons =
     (240207, "marker/tankbuster.png", Resize256),
     (240211, "marker/target_crosshairs.png", Resize256),
     // Enemy icons (256x256)
-    (240101, "actor/enemy_icon1.png", Copy),
-    (240102, "actor/enemy_icon2.png", Copy),
-    (240103, "actor/enemy_icon3.png", Copy),
+    (240101, "actor/enemy1.png", Copy),
+    (240102, "actor/enemy2.png", Copy),
+    (240103, "actor/enemy3.png", Copy),
 ];
 
 var sqpackPathOption = new Option<DirectoryInfo>("--sqpack", "-q")
