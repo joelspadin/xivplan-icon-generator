@@ -27,6 +27,11 @@ internal class Editor
 
     public static void EditImage(string source, string dest, Configuration config)
     {
+        if (Path.GetDirectoryName(dest) is string directory)
+        {
+            Directory.CreateDirectory(directory);
+        }
+
         if (config.IsDirectCopy)
         {
             File.Copy(source, dest, overwrite: true);
@@ -44,11 +49,6 @@ internal class Editor
         if (config.Resize is not null)
         {
             image.Resize(config.Resize);
-        }
-
-        if (Path.GetDirectoryName(dest) is string directory)
-        {
-            Directory.CreateDirectory(directory);
         }
 
         image.Write(dest);
