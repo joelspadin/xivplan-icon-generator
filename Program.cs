@@ -5,7 +5,10 @@ using XivplanIconGenerator;
 var Copy = new Configuration();
 
 var PartyCropResize = new Configuration { Shave = 13, Resize = new MagickGeometry(64, 64) };
+var ShapeCropResize = new Configuration { Shave = 20, Resize = new MagickGeometry(80, 80) };
 
+var Resize80 = new Configuration { Resize = new MagickGeometry(80, 80) };
+var Resize96 = new Configuration { Resize = new MagickGeometry(96, 96) };
 var Resize256 = new Configuration { Resize = new MagickGeometry(256, 256) };
 
 // Icons to generate
@@ -102,19 +105,19 @@ List<(int Id, string Path, Configuration Config)> Icons =
     (230963, "actor/barrier_healer.png", PartyCropResize),
     (230964, "actor/BST.png", PartyCropResize),
     // Markers (192x192)
-    (240032, "marker/target_red.png", Copy),
-    (240033, "marker/target_blue.png", Copy),
-    (240034, "marker/target_purple.png", Copy),
-    (240035, "marker/target_green.png", Copy),
-    (240036, "marker/shape_circle.png", Copy),
-    (240037, "marker/shape_cross.png", Copy),
-    (240038, "marker/shape_square.png", Copy),
-    (240039, "marker/shape_triangle.png", Copy),
+    (240032, "marker/target_red.png", Resize80),
+    (240033, "marker/target_blue.png", Resize96),
+    (240034, "marker/target_purple.png", Resize80),
+    (240035, "marker/target_green.png", Resize80),
+    (240036, "marker/shape_circle.png", ShapeCropResize),
+    (240037, "marker/shape_cross.png", ShapeCropResize),
+    (240038, "marker/shape_square.png", ShapeCropResize),
+    (240039, "marker/shape_triangle.png", ShapeCropResize),
     // Markers (1024x1024)
     (240201, "marker/eye.png", Resize256),
     (240206, "marker/proximity.png", Resize256),
-    (240207, "marker/tankbuster.png", Resize256),
-    (240211, "marker/target_crosshairs.png", Resize256),
+    (240207, "marker/tankbuster.png", Resize96),
+    (240211, "marker/target_crosshairs.png", Resize80),
     // Enemy icons (256x256)
     (240101, "actor/enemy1.png", Copy),
     (240102, "actor/enemy2.png", Copy),
