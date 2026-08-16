@@ -21,7 +21,7 @@ dotnet run
 This assumes that Final Fantasy XIV is installed to its default path at `C:\Program Files (x86)\SquareEnix\FINAL FANTASY XIV - A Realm Reborn`. If you have installed it to a custom path, use the `--sqpack` option and provide the path to the game's `game\sqpack` folder.
 
 ```sh
-dotnet run --sqpath 'D:\Final Fantasy XIV - A Realm Reborn\game\sqpack'
+dotnet run --sqpack 'D:\Final Fantasy XIV - A Realm Reborn\game\sqpack'
 ```
 
 This will extract the icons to `out/ui`, then modify them and optimize them for size, placing the final images in `out/xivplan`. The contents of `out/xivplan` can then be pasted into XIVPlan's `public` folder.
