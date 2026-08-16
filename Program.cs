@@ -8,8 +8,10 @@ var PartyCropResize = new Configuration { Shave = 13, Resize = new MagickGeometr
 var ShapeCropResize = new Configuration { Shave = 20, Resize = new MagickGeometry(80, 80) };
 
 var Resize80 = new Configuration { Resize = new MagickGeometry(80, 80) };
+var Resize80Flipped = new Configuration { Resize = new MagickGeometry(80, 80), FlipHorizontal = true };
 var Resize96 = new Configuration { Resize = new MagickGeometry(96, 96) };
 var Resize256 = new Configuration { Resize = new MagickGeometry(256, 256) };
+var Resize512 = new Configuration { Resize = new MagickGeometry(512, 512) };
 
 // Icons to generate
 List<(int Id, string Path, Configuration Config)> Icons =
@@ -63,6 +65,24 @@ List<(int Id, string Path, Configuration Config)> Icons =
     (230901, "actor/tank.png", PartyCropResize),
     (230902, "actor/healer.png", PartyCropResize),
     (230903, "actor/dps.png", PartyCropResize),
+    (230904, "actor/GLA.png", PartyCropResize),
+    (230905, "actor/PGL.png", PartyCropResize),
+    (230906, "actor/MRD.png", PartyCropResize),
+    (230907, "actor/LNC.png", PartyCropResize),
+    (230908, "actor/ARC.png", PartyCropResize),
+    (230909, "actor/CNJ.png", PartyCropResize),
+    (230910, "actor/THM.png", PartyCropResize),
+    (230911, "actor/CRP.png", PartyCropResize),
+    (230912, "actor/BSM.png", PartyCropResize),
+    (230913, "actor/ARM.png", PartyCropResize),
+    (230914, "actor/GSM.png", PartyCropResize),
+    (230915, "actor/LTW.png", PartyCropResize),
+    (230916, "actor/WVR.png", PartyCropResize),
+    (230917, "actor/ALC.png", PartyCropResize),
+    (230918, "actor/CUL.png", PartyCropResize),
+    (230919, "actor/MIN.png", PartyCropResize),
+    (230920, "actor/BTN.png", PartyCropResize),
+    (230921, "actor/FSH.png", PartyCropResize),
     (230922, "actor/PLD.png", PartyCropResize),
     (230923, "actor/MNK.png", PartyCropResize),
     (230924, "actor/WAR.png", PartyCropResize),
@@ -70,8 +90,10 @@ List<(int Id, string Path, Configuration Config)> Icons =
     (230926, "actor/BRD.png", PartyCropResize),
     (230927, "actor/WHM.png", PartyCropResize),
     (230928, "actor/BLM.png", PartyCropResize),
+    (230929, "actor/ACN.png", PartyCropResize),
     (230930, "actor/SMN.png", PartyCropResize),
     (230931, "actor/SCH.png", PartyCropResize),
+    (230932, "actor/ROG.png", PartyCropResize),
     (230933, "actor/NIN.png", PartyCropResize),
     (230934, "actor/MCH.png", PartyCropResize),
     (230935, "actor/DRK.png", PartyCropResize),
@@ -122,6 +144,20 @@ List<(int Id, string Path, Configuration Config)> Icons =
     (240101, "actor/enemy1.png", Copy),
     (240102, "actor/enemy2.png", Copy),
     (240103, "actor/enemy3.png", Copy),
+    // Strategy board objects
+    (240001, "marker/circle_checkered.png", Resize512), // 1024x1024
+    (240002, "marker/square_checkered.png", Resize512), // 1024x1024
+    (240007, "marker/circle_grey.png", Resize512), // 1024x1024
+    (240008, "marker/square_grey.png", Resize512), // 1024x1024
+    (240026, "marker/plain_circle.png", Resize80), // 192x192
+    (240027, "marker/plain_cross.png", Resize80), // 192x192
+    (240028, "marker/plain_triangle.png", Resize80), // 192x192
+    (240029, "marker/plain_square.png", Resize80), // 192x192
+    (240031, "marker/plain_rotate_ccw.png", Resize80), // 192x192
+    (240031, "marker/plain_rotate_cw.png", Resize80Flipped), // 192x192
+    (240104, "marker/enhancement.png", Resize80), // 256x256
+    (240105, "marker/enfeeblement.png", Resize80), // 256x256
+
 ];
 
 var sqpackPathOption = new Option<DirectoryInfo>("--sqpack", "-q")
