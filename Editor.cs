@@ -15,6 +15,11 @@ class Configuration
     /// </summary>
     public IMagickGeometry? Resize { get; set; } = null;
 
+    /// <summary>
+    /// Mirror the image horizontally
+    /// </summary>
+    public bool FlipHorizontal { get; set; } = false;
+
     public bool IsDirectCopy => Shave is null && Resize is null;
 }
 
@@ -49,6 +54,11 @@ internal class Editor
         if (config.Resize is not null)
         {
             image.Resize(config.Resize);
+        }
+
+        if (config.FlipHorizontal)
+        {
+            image.Flop();
         }
 
         image.Write(dest);
